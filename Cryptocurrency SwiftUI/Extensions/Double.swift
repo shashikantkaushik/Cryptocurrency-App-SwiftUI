@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct Double: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+extension Double{
+    
+    private var currencyFormatter6: NumberFormatter{
+        let formatter=NumberFormatter()
+        formatter.usesGroupingSeparator
+        formatter.maximumFractionDigits=2
+        formatter.minimumFractionDigits=6
+        formatter.numberStyle=.currency
+        formatter.locale=.current
+        formatter.numberStyle=
     }
-}
-
-#Preview {
-    Double()
+    
+    func set Curr()->String{
+        let number=NSNumber(value:self)
+        
+    }
 }
